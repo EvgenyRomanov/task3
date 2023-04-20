@@ -10,14 +10,14 @@
   
   
 Запуск тестов:  
-docker compose exec backend vendor/bin/phpunit  
+- docker compose exec backend vendor/bin/phpunit  
   
   
 Выполнить миграции и наполнить БД тестовыми данными:  
-docker compose exec backend php artisan migrate --seed
+- docker compose exec backend php artisan migrate --seed
   
   
 Доступные ресурсы:  
-http://localhost/  
-http://localhost:15432/  
+- http://localhost/  
+- http://localhost:15432/  
 
