@@ -13,7 +13,7 @@
 docker compose exec backend vendor/bin/phpunit  
   
   
-Выполнить миграции и наполнить БД тестовыми данными:
+Выполнить миграции и наполнить БД тестовыми данными:  
 docker compose exec backend php artisan migrate --seed
   
   
