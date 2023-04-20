@@ -125,6 +125,11 @@ class AppointmentController extends Controller
             $query->where('date_appointment', '<=', $data['end_date']);
         }
 
+        $query->orderBy('date_appointment');
+        $query->whereHas('timeInterval', function($query) {
+            $query->orderBy('start_time');
+        });
+
         $appointments = $query->paginate(self::PER_PAGE);
 
         return response()->json($appointments, 200);
